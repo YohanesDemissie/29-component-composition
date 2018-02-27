@@ -12,7 +12,10 @@ class ExpenseList extends React.Component {
       <div className="expense-list">
         <ul>
           {renderIf(this.props.expenses,
-          this.props.expenses.map(expense => <ExpenseItem key={expense._id} item={expense}/> ))}
+          this.props.expenses.map(expense =>
+          <ExpenseItem key={expense._id}
+          item={expense}
+          dashboard={this.props.dashboard}/> ))}
         </ul>
       </div>
     )
