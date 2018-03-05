@@ -23,10 +23,8 @@ class Dashboard extends React.Component {
     }
   }
 
-  render() {
-    let totalSpend = this.state.expenses.reduce((a, b) => a + parseInt(b.price), 0);
-    let remainingBudget = this.state.budget - totalSpend
 
+  render() {
     return (
       <div className="main-content">
         <section className="main-data">
@@ -40,7 +38,7 @@ class Dashboard extends React.Component {
         {renderIf(remainingBudget < 0 && !this.state.showError, //if we over spend, throw error
         <Modal close={() => this.setState({showError: !this.state.showError})}>
         <section>
-          <h1>Stuff will be here that makes sense</h1>
+          <h1>expenses</h1>
         </section>
         </Modal>
         )}

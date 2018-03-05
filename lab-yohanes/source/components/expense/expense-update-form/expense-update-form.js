@@ -39,7 +39,6 @@ class ExpenseUpdateForm extends React.Component {
             onChange={this.handleChange}/>
           <button type="button">update</button>
           <button type="button" onClick={this.props.close}>cancel</button>
-
         </form>
       )
     }
